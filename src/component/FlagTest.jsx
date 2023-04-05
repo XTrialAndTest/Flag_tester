@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useGlobalContext } from './countries';
-import '../app.css';
+
 import './flagtest.scss';
 
 function FlagTest() {
