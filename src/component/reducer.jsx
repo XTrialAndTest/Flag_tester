@@ -1,8 +1,9 @@
 let reducer = (state, action) => {
-  let randozider = Math.floor(Math.random() * 250);
+  let randozider = Math.floor(Math.random() * 249);
   let indepCountry = [];
   switch (action.type) {
     case 'SUCCESS':
+      console.log(indepCountry);
       action.payload.data.map((single) => {
         if (single.independent == true) {
           indepCountry.push(single);
@@ -13,7 +14,7 @@ let reducer = (state, action) => {
         ...state,
         countries: indepCountry,
         targetCountry: [
-          indepCountry[Math.floor(Math.random() * indepCountry.length - 1)],
+          indepCountry[Math.floor(Math.random() * indepCountry.length - 2)],
         ],
       };
 
