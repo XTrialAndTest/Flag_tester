@@ -3,7 +3,6 @@ let reducer = (state, action) => {
   let indepCountry = [];
   switch (action.type) {
     case 'SUCCESS':
-      console.log(indepCountry);
       action.payload.data.map((single) => {
         if (single.independent == true) {
           indepCountry.push(single);
